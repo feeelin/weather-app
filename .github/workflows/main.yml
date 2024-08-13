@@ -26,4 +26,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Tests
       run: |
-        python3 ./tests/test_main.py
+        python3 tests/test_main.py
