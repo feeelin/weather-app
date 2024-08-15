@@ -5,7 +5,7 @@ class ConsoleInterface:
 
     def __hello_screen(self):
         pass
-    
+
     def __city_screen(self):
         pass
 
