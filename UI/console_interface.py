@@ -9,5 +9,7 @@ class ConsoleInterface:
     def __city_screen(self):
         pass
 
-    def __data_screen(self):
-        pass
+    def __data_screen(self, name_town):
+        if name_town:
+
+
