@@ -6,8 +6,8 @@ import requests
 
 class OpenWeatherMapHttpClient(HttpClient):
 
-    def get_city_coords(self) -> dict:
-        with requests.get(f'{self._session.base_url}/geo/1.0/direct', params={'q': 'city', 'appid': settings.API_KEY}) as response:
+    def get_city_coords(self, city) -> dict:
+        with requests.get(f'{self._session.base_url}/geo/1.0/direct', params={'q': city, 'appid': settings.API_KEY}) as response:
             return response.json()
 
     def get_city_forecast(self, city) -> dict:
