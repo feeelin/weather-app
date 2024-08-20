@@ -1,5 +1,5 @@
 import unittest
-from serialize_forecast import Weather
+from serialization.serialize_forecast import Weather
 
 
 class TestSerializeForecast(unittest.TestCase):
@@ -10,11 +10,8 @@ class TestSerializeForecast(unittest.TestCase):
             "description": "moderate rain",
             "icon": "10d"
         }
-        test_weather = Weather(id=501,main="Rain",description="moderate rain",icon="10d")
+        test_weather = Weather(id=501,main="Rain", description="moderate rain", icon="10d")
         test_weather_2 = Weather.model_validate(test_obj)
-        # test_weather_2.model_validate(test_obj)
+
         self.assertEqual(test_weather == test_weather_2, True)
 
-
-if __name__ == '__main__':
-    unittest()
