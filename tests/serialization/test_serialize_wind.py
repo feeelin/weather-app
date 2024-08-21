@@ -2,7 +2,7 @@ import unittest
 from serialize_wind import Wind
 
 
-class TestSerializeWind(unittest.TestCase):
+class TestWind(unittest.TestCase):
     def test_wind(self):
         test_obj = {
             "speed": 0.62,
