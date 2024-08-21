@@ -1,4 +1,5 @@
 import unittest
+
 from serialize_primary import Primary
 
 
