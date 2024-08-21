@@ -1,3 +1,38 @@
+from pydantic import BaseModel, Field
+import json
+from typing import List
+# ******************************
+from serialize_forecast import Weather
+from serialize_wind import Wind
+
+
+# def read_input_json(filename: str) -> dict:
+#     with open(file=filename, encoding="UTF-8") as file:
+#         output = json.load(file)
+#     return output
+
+
+class Rain(BaseModel):
+    oneH: float = Field(alias='oneH', validation_alias='1h')
+
+class Clouds(BaseModel):
+    all: int
+
+
+class Serialize(BaseModel):
+    weather: List[Weather]
+    wind: Wind
+    visibility: int
+    rain: Rain
+    clouds: Clouds
+
+
+
+# if __name__ == "__main__":
+#     example_data = read_input_json('data.json')
+#     test = Serialize(**example_data)
+#     print(test)
+#==============================================================================================================
 # Импортируем стандарную бибилиотеку для работы с JSON
 import json
 
