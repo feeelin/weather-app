@@ -1,6 +1,6 @@
 import unittest
 
-from serialize_primary import Primary
+from serialization.serialize_primary import Primary
 
 
 class TestSerializePrimary(unittest.TestCase):
