@@ -1,19 +1,22 @@
+from web.OpenWeatherMapHttpClient import OpenWeatherMapHttpClient as OWM
+from config import settings
+from serialization.serializer import GeneralClass
+
 
 class ConsoleInterface:
     def __init__(self):
         pass
 
-    def __hello_screen(self):
+    def hello_screen(self):
         pass
 
-    def __city_screen(self):
+    def city_screen(self):
         pass
 
-    def __data_screen(self, name_town):
+    def data_screen(self, name_town: str):
         if name_town:
             self.name_town = name_town
         return name_town
-
 
 
     def __process_data(self, name_town: str):
