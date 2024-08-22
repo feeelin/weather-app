@@ -12,5 +12,5 @@ class TestOpenWeatherMapHttpClient(unittest.TestCase):
         self.assertEqual(type(result), list)
 
     def test_forecast_response(self):
-        result = self.client.get_city_forecast({'lat': 10, 'lon': 15})
+        result = self.client.get_city_forecast([{"lat": 15, "lon": 15}])
         self.assertEqual(type(result), dict)
