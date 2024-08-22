@@ -9,7 +9,7 @@ class TestOpenWeatherMapHttpClient(unittest.TestCase):
 
     def test_city_response(self):
         result = self.client.get_city_coords('Tula')
-        self.assertEqual(type(result), dict)
+        self.assertEqual(type(result), list)
 
     def test_forecast_response(self):
         result = self.client.get_city_forecast([{"lat": 15, "lon": 15}])

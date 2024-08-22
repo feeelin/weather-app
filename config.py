@@ -3,7 +3,7 @@ from pydantic import Field
 
 
 class Settings(BaseSettings):
-    API_KEY: str = '2bf227af1c09c8b5df6dd03178818f27'
+    API_KEY: str = '193860b304f6e0731ed43ab5c80339a8'
 
 
 settings = Settings()
