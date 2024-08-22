@@ -16,7 +16,9 @@ class ConsoleInterface:
     def data_screen(self, name_town: str):
         if name_town:
             self.name_town = name_town
+            self.__process_data(name_town)
         return name_town
+
 
 
     def __process_data(self, name_town: str):
