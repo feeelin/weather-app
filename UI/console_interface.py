@@ -22,10 +22,12 @@ class ConsoleInterface:
     def city_screen(self):
         return self.__city_input
 
-    def data_screen(self, name_town: str):
-        if name_town:
-            self.name_town = name_town
-        return name_town
+    def data_screen(self, data: GeneralForecast):
+        return f"""Прогноз для города {data.name}:
+        {data.weather.description.capitalize()}.
+        Температура воздуха {data.primary.temp}, ощущается как {data.primary.feels_like}.
+        Скорость ветра {data.wind.speed} м/с
+        """
 
     def check_option(self, option: str) -> bool:
         try:

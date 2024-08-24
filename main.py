@@ -28,14 +28,14 @@ class Program:
 
     def __get_forecast(self) -> None:
         city = input(self.interface.city_screen())
-        print(self.__process_data(city))
+        data = self.__process_data(city)
+        print(self.interface.data_screen(data))
+        self.read_user_input()
 
     def __process_data(self, city: str):
         self.web_client = OWM('https://api.openweathermap.org', settings.API_KEY)
         coords = self.web_client.get_city_coords(city)
         json_forecast = self.web_client.get_city_forecast(coords)
-
-        print(json_forecast)
         result = GeneralForecast.model_validate(json_forecast)
 
         return result
