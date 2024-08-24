@@ -5,53 +5,13 @@ import unittest
 class TestGeneralForecast(unittest.TestCase):
 
     def test_general_forecast(self):
-        data = {
-            "coord": {
-                "lon": 10.99,
-                "lat": 44.34
-            },
-            "weather": [
-                {
-                    "id": 501,
-                    "main": "Rain",
-                    "description": "moderate rain",
-                    "icon": "10d"
-                }
-            ],
-            "base": "stations",
-            "main": {
-                "temp": 298.48,
-                "feels_like": 298.74,
-                "temp_min": 297.56,
-                "temp_max": 300.05,
-                "pressure": 1015,
-                "humidity": 64,
-                "sea_level": 1015,
-                "grnd_level": 933
-            },
-            "visibility": 10000,
-            "wind": {
-                "speed": 0.62,
-                "deg": 349,
-                "gust": 1.18
-            },
-            "rain": {
-                "1h": 3.16
-            },
-            "clouds": {
-                "all": 100
-            },
-            "dt": 1661870592,
-            "sys": {
-                "type": 2,
-                "id": 2075663,
-                "country": "IT",
-                "sunrise": 1661834187,
-                "sunset": 1661882248
-            },
-            "timezone": 7200,
-            "id": 3163858,
-            "name": "Zocca",
-            "cod": 200
-        }
+        data = {'coord': {'lon': 37.6175, 'lat': 54.193},
+                'weather': [{'id': 804, 'main': 'Clouds', 'description': 'пасмурно', 'icon': '04d'}],
+                'base': 'stations',
+                'main': {'temp': 22.76, 'feels_like': 22.19, 'temp_min': 22.76, 'temp_max': 22.76, 'pressure': 1020,
+                         'humidity': 42, 'sea_level': 1020, 'grnd_level': 996}, 'visibility': 10000,
+                'wind': {'speed': 1.74, 'deg': 331, 'gust': 1.65}, 'clouds': {'all': 100}, 'dt': 1724495596,
+                'sys': {'country': 'RU', 'sunrise': 1724466214, 'sunset': 1724517632}, 'timezone': 10800, 'id': 480562,
+                'name': 'Тула', 'cod': 200}
+
         result = GeneralForecast.model_validate(data)
