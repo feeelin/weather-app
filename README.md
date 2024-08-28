@@ -7,6 +7,8 @@ ensure code coverage with tests, and interact with each other to produce results
 
 ## Usage
 
+> You need to provide your own Open Weather Map API Key in `config.py`
+
 Windows
 
 `pip install -r requirements.txt`
