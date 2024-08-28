@@ -8,6 +8,8 @@
 
 ## Использование
 
+> Для работы приложения вам необходимо указать ваш ключ для Open Weather Map API в `config.py`
+
 Windows
 
 `pip install -r requirements.txt`
