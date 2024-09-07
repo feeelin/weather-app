@@ -1,5 +1,11 @@
-# Weather App
-Application to get the current weather forecast for the entered city. 
+<h1 align="center">
+  Weather App
+</h1>
+
+<p align="center">
+    Application to get the current weather forecast for the entered city. 
+</p>
+<br>
 
 ## Goals
 This project was a collaborative effort between students in the Python32 group while learning the fundamentals of team-based software development and agile methodologies. During its development, students had to perform tasks, go through code review, 
